@@ -1,0 +1,15 @@
+*.DS_Store
+*.png
+*.obj
+*.mtl
+*.tif
+*.nrrd
+*.npy
+
+env/
+model/
+__pycache__/
+
+/output/*
+!/output/.gitkeep
+!cm_viridis.png

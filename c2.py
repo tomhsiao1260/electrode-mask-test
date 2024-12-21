@@ -14,6 +14,22 @@ from core.utils.loader import parse_obj, save_obj
 from core.utils.cut import cutDivide, cutBounding, re_index
 from utils.sdf import closestPointToPoint
 
+# python c2.py --x 2432 --y 2304 --z 10624 --chunk 768
+# python c2.py --x 2990 --y 1800 --z 1200 --chunk 768 # casey pi
+
+# python c2.py --x 2860 --y 2853 --z 9657 --chunk 768
+# python c2.py --x 2860 --y 3621 --z 9657 --chunk 768
+# python c2.py --x 2973 --y 2769 --z 8889 --chunk 768
+# python c2.py --x 2973 --y 3537 --z 8889 --chunk 768
+# python c2.py --x 3140 --y 2700 --z 8121 --chunk 768
+# python c2.py --x 3140 --y 3468 --z 8121 --chunk 768
+# python c2.py --x 3264 --y 2666 --z 7353 --chunk 768
+# python c2.py --x 3264 --y 3434 --z 7353 --chunk 768
+# python c2.py --x 3360 --y 2666 --z 6585 --chunk 768
+# python c2.py --x 3360 --y 3434 --z 6585 --chunk 768
+# python c2.py --x 3360 --y 2373 --z 5817 --chunk 768
+# python c2.py --x 3360 --y 3141 --z 5817 --chunk 768
+
 # python c2.py --x 3380 --y 2533 --z 5049 --chunk 768
 # python c2.py --x 3380 --y 1765 --z 5049 --chunk 768
 # python c2.py --x 3380 --y 2533 --z 4281 --chunk 768
@@ -21,6 +37,24 @@ from utils.sdf import closestPointToPoint
 # python c2.py --x 3400 --y 1900 --z 3513 --chunk 768
 # python c2.py --x 3413 --y 1831 --z 2736 --chunk 768
 # python c2.py --x 3424 --y 1860 --z 1968 --chunk 768
+
+# python c2.py --x 3490 --y 1537 --z 1200 --chunk 768
+# python c2.py --x 3490 --y 2305 --z 1200 --chunk 768
+# python c2.py --x 3574 --y 1693 --z 432 --chunk 768
+# python c2.py --x 3574 --y 2461 --z 432 --chunk 768
+# python c2.py --x 3674 --y 1722 --z 0 --chunk 768
+# python c2.py --x 3674 --y 2490 --z 0 --chunk 768
+
+# 1b
+
+# python c2.py --x 4008 --y 2551 --z 6039 --chunk 768
+# python c2.py --x 4008 --y 1783 --z 6039 --chunk 768
+# python c2.py --x 4075 --y 2815 --z 5271 --chunk 768
+# python c2.py --x 4075 --y 2047 --z 5271 --chunk 768
+# python c2.py --x 4380 --y 3154 --z 4503 --chunk 768
+# python c2.py --x 4380 --y 2386 --z 4503 --chunk 768
+# python c2.py --x 4347 --y 3780 --z 3903 --chunk 768
+# python c2.py --x 4400 --y 2963 --z 3903 --chunk 768
 
 def sort_by_layer(filename):
     match = re.search(r'z(\d+)_d', filename)
@@ -68,7 +102,8 @@ if __name__ == "__main__":
     factor, label_list = 8, [1, 2]
     # factor, label_list = 8, [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    directory = f"./output/{zmin:05}_{ymin:05}_{xmin:05}"
+    # directory = f"./output/{zmin:05}_{ymin:05}_{xmin:05}" # use 1a
+    directory = f"./output/b{zmin:05}_{ymin:05}_{xmin:05}" # use 1b
     nrrd_path = os.path.join(directory, f"{zmin:05}_{ymin:05}_{xmin:05}_mask.nrrd")
     tif_path = os.path.join(directory, f"{zmin:05}_{ymin:05}_{xmin:05}_mask.tif")
 
